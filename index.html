@@ -5,12 +5,19 @@
 <meta charset="utf-8" />
 <title>무제 문서</title>
 <script>
-var cars=['sonata','spark','malibu','sorento'];{
-document.write(cars.reverse(cars));
-}
-for (name in document) {
-    console.log(name);}
+    var userName=prompt("방문자의 이름은?","");
+    
+    if(userName){
+        document.write(userName+"님 반갑습니다!방문을 환영합니다.","<br/>");
+        function myFuc(name, area){
+            document.write("제 이름은"+name+"입니다.","<br/>");
+            document.write(area + "학생입니다.","<br/><br/>")
+        }
 
+        //"김수연"은 name에 "학교앞"은 area에 전달
+        myFuc("김수연","계원예술대학교");
+    }
+    
 </script>
 </head>
 
