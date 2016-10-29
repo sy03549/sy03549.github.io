@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<title>무제 문서</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link href="css/jquery.scrollbar.css" rel="stylesheet" />
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <script src="js/jquery.scrollbar.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            /*scoll top button*/
+            $( window ).scroll( function() {
+                if ( $( this ).scrollTop() > 450 ) {
+                    $( '.top' ).fadeIn();
+                } else {
+                    $( '.top' ).fadeOut();
+                }
+            } );
+            $( '.top' ).click( function() {
+                $( 'html, body' ).animate( { scrollTop : 0 }, 980 );
+                return false;
+            } );
+            /*navigation*/
+            (function($) {          
+                $(document).ready(function(){                    
+                    $(window).scroll(function(){                          
+                        if ($(this).scrollTop() > 200) {
+                            $('#menu').fadeIn(400);
+                            $('#menu').css({"background":"rgba(10,37,59,1)"});
+                        } else if($(this).scrollTop()==0) {
+
+                            $('#menu').css({"background":"rgba(10,37,59,0)"});
+                        }
+                    });
+                });
+            })(jQuery);
+            /*parallex*/
+            $(window).on('mousemove', function(e) {
+                var w = $(window).width();
+                var h = $(window).height();
+                var offsetX = 0.5 - e.pageX / w;//상대 좌표 x값
+                var offsetY = 0.5 - e.pageY / h;//y값
+
+                $(".parallax").each(function(i, el) {
+                    var offset = parseInt($(el).data('offset'));
+                    var translate = "translate3d(" + Math.round(offsetX * offset) + "px," + Math.round(offsetY * offset) + "px, 0px)";
+
+                    $(el).css({
+                        '-webkit-transform': translate,
+                        'transform': translate,
+                        'moz-transform': translate
+                    });
+                });
+            });
+            /*scrollbox*/
+            $(document).ready(function(){
+                $('.txtbox').scrollbar();
+
+                $('.btn-lang').hover(
+                    function(){
+                        $('.layerbox').stop().slideDown('fast');
+                    },
+                    function(){
+                        $('.layerbox').stop().slideUp('fast');
+                    }
+                );
+
+            });
+            $(window).load(function(){
+                scrollboxresize(60);
+            });
+            $(window).resize(function(){
+                scrollboxresize(200);
+            });
+            function scrollboxresize(minus){
+                var windowy = $(window).height();
+                console.log('처음' + windowy);
+                windowy -= minus;
+                console.log('나중' + windowy);
+                $('.scrollbox').css('height',windowy);
+            }
+            /*mousehover*/
+            $('.button').hover(function(){
+                $('.button').toggleClass('change')
+            });
+            $('ul.profile li.box1').hover(function(){
+                $('li.box1').toggleClass('change')
+            });
+            $('ul.profile li.box2').hover(function(){
+                $('li.box2').toggleClass('change')
+            });
+            $('ul.profile li.box3').hover(function(){
+                $('li.box3').toggleClass('change')
+            });
+        });
+        
+        
+    </script>
+</head>
+
+<body>
+<header id="menu">
+    <div>
+        <h1><a href="#"><img src="./img/logo.png" width="65px" height="52px" alt="LOGO"></a></h1>
+        <nav>
+            <a href="#">HOME</a>
+            <a href="#work">WORK</a>
+            <a href="#team">OUR TEAM</a>
+        </nav>
+    </div>
+</header>
+<section>
+    <article id="#" class="main">
+        <div data-offset="30" class="parallax"></div>
+        <div class="wrapper">
+            <h1 class="txt-item">
+                <span class="txt_1">M</span>
+                <span class="txt_3">o</span>
+                <span class="txt_2">t</span>
+                <span class="txt_3">i</span>
+                <span class="txt_1">o</span>
+                <span class="txt_4">n </span>
+                <span class="txt_1">G</span>
+                <span class="txt_2">r</span>
+                <span class="txt_1">a</span>
+                <span class="txt_2">p</span>
+                <span class="txt_4">h</span>
+                <span class="txt_3">i</span>
+                <span class="txt_1">c</span>
+            </h1>
+            <p>work of the project studio</p>
+            <div class="button"><a href="#team">Our team</a></div>
+        </div>
+    </article>
+    <article id="work" class="work">
+        <h1>work</h1>
+        <div class="contents">
+            <video autoplay controls muted poster="img/Smishing.png" width="70%" preload="auto">
+                <source src="mov/Smishing.mp4" type="video/mp4" /> /*controls 를 사용하면 동영상 아래부분에 동영상 바가 생김*/
+            </video>
+            <div class="explain">
+                <div class="imgbox"><img src="img/iphone.png" width="100px" height="100px" alt="contents"></div>
+                <span>선</span>
+                <div class="txtbox scrollbar-outer">
+                    <h2>내정보 내가 지키기!</h2>
+                    <p>스미싱 / 보이스 피싱 등 최근 문제가 되고있는 범죄에 대해
+                        알기쉽게 설명하고, 예방법, 대처방법 등을 모션그래픽으로 풀어나가면서 설명한다.
+                        해커가 스마트폰을 원격조정하는 것을 마리오네트로 표현하였고 정보를 빼가는 바이러스들을 캐릭터 하여 스미싱 피해자가 스마트 폰에서 링크를 눌렀을때 바이러스들이 피해자의 폰에서 정보를 들고 해커의 스마트폰으로 옮겨가는 장면을 연출하였다. </p>
+                </div>
+            </div>
+        </div>
+    </article>
+    <article id="team" class="team">
+        <h1>out team</h1>
+        <div>
+            <ul class="profile">
+                <li class="box box1"><img src="img/person.png" width="250px" height="250px" alt="img"></li>
+                <li>김수연</li>
+            </ul>
+            <ul class="profile">
+                <li class="box box2"><img src="img/person.png" width="250px" height="250px" alt="img"></li>
+                <li>서예림</li>
+            </ul>
+            <ul class="profile">
+                <li class="box box3"><img src="img/person.png" width="250px" height="250px" alt="img"></li>
+                <li>유승현</li>
+            </ul>
+        </div>
+    </article>
+    <a href="#" class="top">Top</a>
+</section>
+<footer>
+    <div class="copy"><p>Copyrightⓒ20016 뇌트워크.all rights reseved.</p>
+    </div>
+</footer>
+</body>
+</html>
