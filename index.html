@@ -106,18 +106,6 @@
     <script src="js/jquery.scrollbar.min.js"></script>
     <script>
         $(document).ready(function(){
-            /*scoll top button*/
-            $( window ).scroll( function() {
-                if ( $( this ).scrollTop() > 450 ) {
-                    $( '.top' ).fadeIn();
-                } else {
-                    $( '.top' ).fadeOut();
-                }
-            } );
-            $( '.top' ).click( function() {
-                $( 'html, body' ).animate( { scrollTop : 0 }, 980 );
-                return false;
-            } );
             /*navigation*/
             (function($) {
                 $(document).ready(function(){
