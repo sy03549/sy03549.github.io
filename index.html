@@ -1,30 +1,238 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
 <meta charset="utf-8" />
 <title>무제 문서</title>
-<script>
-    var userName=prompt("방문자의 이름은?","");
-    
-    if(userName){
-        document.write(userName+"님 반갑습니다!방문을 환영합니다.","<br/>");
-        function myFuc(name, area){
-            document.write("제 이름은"+name+"입니다.","<br/>");
-            document.write(area + "학생입니다.","<br/><br/>")
-        }
-
-        //"김수연"은 name에 "학교앞"은 area에 전달
-        myFuc("김수연","계원예술대학교");
-    }
-    
-</script>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link href="css/jquery.scrollbar.css" rel="stylesheet" />
 </head>
-
 <body>
+<header id="menu">
+    <div>
+        <h1><a href="#"><img src="./img/logo.png" width="65px" height="52px" alt="LOGO"></a></h1>
+        <nav>
+            <span id="home">HOME</span>
+            <span id="sub1">WORK</span>
+            <span id="sub2">OUR TEAM</span>
+        </nav>
+    </div>
+</header>
+<section>
+    <article id="main" class="main">
+        <div data-offset="30" class="parallax"></div>
+        <div class="wrapper">
+            <h1 class="txt-item">
+                <span class="txt_1">M</span>
+                <span class="txt_3">o</span>
+                <span class="txt_2">t</span>
+                <span class="txt_3">i</span>
+                <span class="txt_1">o</span>
+                <span class="txt_4">n</span>
+                <span class="txt_1">G</span>
+                <span class="txt_2">r</span>
+                <span class="txt_1">a</span>
+                <span class="txt_2">p</span>
+                <span class="txt_4">h</span>
+                <span class="txt_3">i</span>
+                <span class="txt_1">c</span>
+            </h1>
+            <p>work of the project studio</p>
+            <div class="button"><a href="#team">Our team</a></div>
+        </div>
+    </article>
+    <article id="work" class="work">
+        <h1>WORK</h1>
+        <!--work-01 치노시오야-->
+        <div class="work-01">
+            <div class="effect animation-01"></div>
+            <div class="contents-01">
+                <div class="fade fade-01">
+                    <h3>치노시오야 공모전</h3>
+                    <h4>UCC부문 장려</h4>
+                    <p>치노베리테 에센스의 추출물을 캐릭터로 디자인해 각 성분이 추출되는 과정을 이야기로 풀어 귀여운 에니메이션/모션그래픽으로 제작한 영상</p>
+                    <div class="videobt">영상보기</div>
+                </div>
+            </div>
+            <div class="title title-01">
+                <div><h2>01</h2></div>
+            </div>
+        </div>
+        <div class="video-01">
+            <div class="closebt">
+                <span></span>
+                <span></span>
+            </div>
+            <video class="ucc" controls muted poster="img/cover.jpg" preload="auto">
+                <source src="mov/ucc.mp4" width="100%" type="video/mp4" />
+            </video>
+            <video class="cdak" controls muted poster="img/Smishing.png" preload="auto">
+                <source src="mov/Smishing.mp4" width="100%" type="video/mp4" />
+            </video>
+        </div>
+        <!--work-02 씨닷 -->
+        <div class="work-02">
+            <div class="effect animation-02"></div>
+            <div class="contents-02">
+                <div class="fade fade-02">
+                    <h3>CDAK<span>(커뮤니케이션디자인)</span>국제공모전</h3>
+                    <h4>모션그래픽부문 입상</h4>
+                    <p>최근 문제가 되고 있는 스미싱에 대해서 쉽게 설명하기 위해 범죄자들을 캐릭터화해 시각적으로 경각심을 일깨워 주며 예방법, 대처방법 등의 설명을 모션그래픽으로 제작한 영상</p>
+                    <div class="videobt videobt-02">영상보기</div>
+                </div>
+            </div>
+            <div class="title title-02">
+                <div><h2 class="e">02</h2></div>
+            </div>
+        </div>
+    </article>
+</section>
+<section id="team">
+    <article class="team">
+        <h1>TEAM</h1>
+        <span class="icon ic1"><img src="img/icon.png" width="100%" alt=""></span>
+        <span class="icon ic2"><img src="img/icon.png" width="100%" alt=""></span>
+        <span class="icon ic3"><img src="img/icon.png" width="100%" alt=""></span>
+        <ul class="intro">
+            <li><img src="img/g-1.png" alt=""></li>
+            <li><img src="img/g-2.png" alt=""></li>
+            <li><img src="img/g-3.png" alt=""></li>
+        </ul>
+    </article>
+</section>
+<footer>
+    <p>ⓒ2016 All Rights Reseved.Made with by Su Yeon KIM Designs</p>
+</footer>
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <script src="js/jquery.scrollbar.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            /*scoll top button*/
+            $( window ).scroll( function() {
+                if ( $( this ).scrollTop() > 450 ) {
+                    $( '.top' ).fadeIn();
+                } else {
+                    $( '.top' ).fadeOut();
+                }
+            } );
+            $( '.top' ).click( function() {
+                $( 'html, body' ).animate( { scrollTop : 0 }, 980 );
+                return false;
+            } );
+            /*navigation*/
+            (function($) {
+                $(document).ready(function(){
+                    $(window).scroll(function(){
+                        if ($(this).scrollTop() > 200) {
+                            $('#menu').fadeIn(800);
+                            $('#menu').css({"background":'rgba(3,17,28,1)'});
+                        } else if($(this).scrollTop()==0) {
 
+                            $('#menu').css({"background":'rgba(3,17,28,0)'});
+                        }
+                    });
+                });
+            })(jQuery);
+            /*scrollTop*/
+            $('#home').click(function(){
+                $('html,body').animate({scrollTop:'0'},800);
+            });
+            $('#sub1').click(function(){
+                $('html,body').animate({scrollTop:'1020'},800);
+            });
+            $('#sub2, .button').click(function(){
+                $('html,body').animate({scrollTop:'2950'},800);
+            });
+            /*parallex*/
+            $(window).on('mousemove', function(e) {
+                var w = $(window).width();
+                var h = $(window).height();
+                var offsetX = 0.5 - e.pageX / w;
+                var offsetY = 0.5 - e.pageY / h;
+                $('.parallax').each(function(i, el) {
+                    var offset = parseInt($(el).data('offset'));
+                    var translate = 'translate3d(' + Math.round(offsetX * offset) + 'px,' + Math.round(offsetY * offset) + 'px, 0px)';
+                    $(el).css({
+                        '-webkit-transform': translate,
+                        'transform': translate,
+                        'moz-transform': translate
+                    });
+                });
+            });
+            /*mousehover*/
+            $('nav > span').hover(function(){
+                $(this).toggleClass('hover')
+            });
+            $('.button').hover(function(){
+                $(this).toggleClass('change')
+            });
+            /*work animation-scroll*/
+            /*스크롤 탑값 지정해서 해당위치에 오면 work부분의 컨텐츠 에니메이션 실행*/
+            $(window).scroll(function(){
+                if($(window).scrollTop() + $(window).height() > $('.work-01').offset().top)
+                    {
+                        $('.animation-01').addClass('motion');
+                        $('.contents-01').addClass('motion');
+                        $('.fade-01').addClass('motion');
+                        $('.title-01 div h2').addClass('motion');
+                    }
+            });
+            $(window).scroll(function(){
+                if($(window).scrollTop() + $(window).height() > $('.work-02').offset().top)
+                {
+                    $('.animation-02').addClass('motion');
+                    $('.contents-02').addClass('motion');
+                    $('.fade-02').addClass('motion');
+                    $('.title-02 div h2').addClass('motion');
+                }
+            });
+            $('.videobt').click(function(){
+                $('.video-01').show();
+                $('.ucc').show();
+            });
+            $('.closebt').click(function(){
+                $('.video-01').hide();
+                $('.ucc').hide();
+                $('.cdak').hide();
+            });
+            $('.videobt-02').click(function(){
+                $('.video-01').show();
+                $('.cdak').show();
+            });
 
-
+            $('.intro li:nth-child(1)').hover(function(){
+                $('.ic1').stop().animate({
+                    width:'0',
+                    top:'380px'
+                })
+                $('.ic1').stop().animate({
+                    width:'76px',
+                    top:'230px'
+                });
+                $('.ic1').addClass('motion');
+            });
+            $('.intro li:nth-child(2)').hover(function(){
+                $('.ic2').stop().animate({
+                    width:'0',
+                    top:'380px'
+                })
+                $('.ic2').stop().animate({
+                    width:'76px',
+                    top:'230px'
+                });
+                $('.ic2').addClass('motion');
+            });
+            $('.intro li:nth-child(3)').hover(function(){
+                $('.ic3').stop().animate({
+                    width:'0',
+                    top:'380px'
+                })
+                $('.ic3').stop().animate({
+                    width:'76px',
+                    top:'230px'
+                });
+                $('.ic3').addClass('motion');
+            });
+        });
+    </script>
 </body>
-
 </html>
