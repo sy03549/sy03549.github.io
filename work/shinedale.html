@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>su yeon portfolio</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/sub.css">
+    <link rel="stylesheet" href="../css/aos.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="#about">About me</a>
+            <a href="#work">Works</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section>
+        <div class="workVisual shinedale">
+            <div class="wrap">
+                <div class="workTit">
+                    <p class="type">WEB &amp; MOBILE RENEWAL</p>
+                    <p class="title">샤인데일 컨트리클럽</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="../img/thumbnail/shinedail.png" alt="샤인데일썸네일">
+                </div>
+            </div>
+        </div>
+        <div class="contents">
+            <div class="infoArea">
+                <div class="leftCnt">
+                    <div class="summary">
+                        <h3>한국에서 가장 아름다운 골프장 '샤인데일' 리뉴얼 프로젝트</h3>
+                        <p></p>
+                    </div>
+                    <div class="goSiteBtn">
+                        <a href="#">웹사이트 바로가기</a>
+                        <a href="#">모바일 바로가기</a>
+                    </div>
+                </div>
+                <div class="rightCnt">
+                    <dl class="detailMeta">
+                        <dt>업무포지션</dt>
+                        <dd>기획, 디자인, 퍼블리싱</dd>
+                    </dl>
+                    <dl class="detailMeta">
+                        <dt>참여도</dt>
+                        <dd>기획(50%), 디자인(90%), 퍼블리싱(100%)</dd>
+                    </dl>
+                    <dl class="detailMeta">
+                        <dt>제작기간</dt>
+                        <dd>18.09.25 ~ 18.10.25</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="workCnt">
+                <img src="../img/work/shinedale00.png" alt="메인페이지">
+                <img src="../img/work/shinedale03.png" alt="레스토랑페이지">
+                <img src="../img/work/shinedale02.png" alt="코스소개페이지">
+                <img src="../img/work/shinedale02_1.png" alt="코스소개페이지">
+                <img src="../img/work/shinedale05.png" alt="공지사항">
+                <img src="../img/work/shinedale_m.png" alt="모바일">
+            </div>
+            <div class="buttonArea mt150 backTop">
+                <a href="javascript:;" class="viewBtn">
+                    <p>BACK TO TOP<span>↑</span></p>
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footWrap">
+            <div class="leftCnt">
+                <span class="symbol"></span>
+                <p>I hope to meet<br>you soon!</p>
+            </div>
+            <div id="contact" class="rightCnt">
+                <dl>
+                    <dt>GET IN TOUCH</dt>
+                    <dd>
+                        <p>sy03549@gmail.com</p>
+                        <p>+82 10 4624 3549</p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>EXPLORE</dt>
+                    <dd>
+                        <a href="index.html">Home</a>
+                        <a href="aboutme.html">About me</a>
+                        <a href="works.html">Works</a>
+                        <a href="contact.html">Contact</a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <p class="copyright">
+            Copyright © Su Yeon KIM 2019. All rights reserved.
+        </p>
+    </footer>
+    
+    
+    <script src="../js/jquery-1.12.3.min.js"></script>
+    <script src="../js/aos.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            /*네비게이션*/
+            $(window).scroll(function(){
+                if ($(window).scrollTop() >= 530) {
+                    $('nav a').addClass('colChange');
+                }
+                else {
+                    $('nav a').removeClass('colChange');
+                }
+            });
+            
+            $('.backTop').click(function(){
+                $('html,body').animate({scrollTop:'0'},800);
+            });
+            
+        });
+        var myAOS = function() {
+            AOS.init({
+                offset: 200,
+                easing: 'ease-out-back',
+                duration: 1500,
+                once:true
+            });
+        }
+        myAOS();
+    </script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+section {
+    width:100%;
+    background:#313131;
+}
+/*-- 비주얼--*/
+div.visual {
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+}
+div.visual div.parallax span {
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+div.visual div.parallax span.blue {
+    top:-50px;
+    background:url('../img/particle_blue.png') no-repeat top center;
+}
+div.visual div.parallax span.red {
+    left:-80px;
+    background:url('../img/particle_red.png') no-repeat top center;
+}
+div.visual div.parallax span.gray {
+    background:url('../img/particle_gray.png') no-repeat top center;
+}
+div.mainTit {
+    position:absolute;
+    top:50%;
+    margin-top:-180px;
+}
+div.mainTit div {
+    overflow-y:hidden;
+}
+div.mainTit h1 {
+    padding:10px 0;
+    font-size:120px;
+    font-family: 'Noto Sans Bold';
+    color:#e7b542;
+    animation:txtEffect .8s both;
+    animation-timing-function:cubic-bezier(.55,.3,0,.99);
+    animation-delay:1.5s;
+}
+@keyframes txtEffect {
+  0%   {
+		transform:translate(0,110px);
+		opacity:0;
+    }
+  100% {
+		transform:translate(0,0);
+		opacity:1;
+    }
+}
+div.mainTit h1.stroke {
+    color: transparent;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #e7b542;
+    animation-delay:2s;
+}
+div.mainTit h1 span.dot {
+    color:#a8393f;
+}
+div.scrollDown {
+    position:absolute;
+    bottom:90px;
+    width:1200px;
+    text-align:center;
+    animation:txtEffect .8s both;
+    animation-timing-function:cubic-bezier(.55,.3,0,.99);
+    animation-delay:2.2s;
+}
+div.scrollDown p {
+    margin-bottom:5px;
+    font-size:14px;
+    color:#929292;
+}
+div.scrollDown span.arrow {
+    display:inline-block;
+    width:16px;
+    height:8px;
+    background:url('../img/scrollArrow.png') no-repeat;
+    animation:scrolling 2s infinite;
+    animation-timing-function:ease-out;;
+}
+@keyframes scrolling {
+    0% {transform: translateY(0)}    
+    50% {transform: translateY(5px)}
+    100% {transform: translateY(0px)}
+}
+/*-- END 비주얼--*/
+
+
+
+/*-- 컨테이너--*/
+div.trickScroll {
+    position:relative;
+    top:-50px;
+    left:50%;
+    margin-left:-600px;
+    width:1200px;
+    height:900px;
+}
+div.trickScroll div.element {
+    padding-bottom:60px;
+    width:1200px;
+    height:900px;
+    background:#fff;
+    animation:trick .5s both;
+    animation-timing-function:cubic-bezier(.55,.3,0,.99);
+    animation-delay:2.5s;
+    box-sizing:content-box;
+}
+@keyframes trick {
+    0% {transform:translateY(60px);
+}    
+    100% {transform: translateY(0px)}
+}
+
+div.contents {
+    position:relative;
+    width:100%;
+    background:#fff;
+}
+
+/*about*/
+div.about {
+    position:absolute;
+    top:-900px;
+    padding-top:180px;
+    width:1200px;
+    text-align:center;
+}
+
+/*work*/
+div.work {
+    padding-top:80px;
+    padding-bottom:250px;
+}
+div.work div.workInner {
+    padding:80px 0 200px 0;
+    display:grid;
+    grid-template-columns:auto auto;
+    grid-column-gap:60px;
+    grid-row-gap:70px;
+}
+a.workItem {
+    position:relative;
+    display:none;
+    width:570px;
+    height:500px;
+}
+a.workItem:nth-child(4) {
+    display:block;
+}
+a.workItem.active {
+    display:block;
+}
+a.workItem:nth-child(2n) {
+    top:160px;
+}
+a.workItem:after {
+    content:'Veiw More';
+    position:absolute;
+    top:50%;
+    margin-top:-10px;
+    display:block;
+    width:100%;
+    font-size:20px;
+    text-align:center;
+    color:#fff;
+    z-index:3;
+    transform:translateY(20px);
+    transition: all .4s .1s cubic-bezier(.55,.3,0,.99);
+    opacity:0;
+}
+a.workItem:hover:after {
+    transform:translateY(0);
+    opacity:1;
+}
+a.workItem:before {
+    content:'';
+    position:absolute;
+    top:10px;
+    left:10px;
+    display:block;
+    width:550px;
+    height:480px;
+    background:#313131;
+    z-index:2;
+    transform: scale3d(.95,.95,1);
+    transition: all .4s ease;
+    opacity:0;
+}
+a.workItem:hover:before {
+    transform: scale3d(.98,.98,1);
+    opacity:.9;
+}
+a.workItem img {
+    position:absolute;
+    z-index:0;
+}
+a.workItem div.workDetail {
+    position:absolute;
+    padding:80px 60px;
+    color:#fff;
+    z-index:1;
+}
+a.workItem div.workDetail p.type {
+    font-size:14px;
+    font-family: 'Noto Sans Bold';
+}
+a.workItem div.workDetail p.title {
+    margin-top:20px;
+    font-size:26px;
+}
+/*-- END 컨테이너 --*/
