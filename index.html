@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="css/aos.css">
 </head>
 <body>
+   <div class="loading">
+        <div class="loadingInner"></div>
+   </div>
     <header>
         <nav>
             <a href="#home">Home</a>
@@ -55,7 +58,7 @@
                             언제나 웹 접근성, 웹 표준성에 적합하게 개발하려 노력합니다.
                         </p>
                         <div class="buttonArea mt110" data-aos="fade-up" data-aos-delay="200">
-                            <a href="#" class="viewBtn">
+                            <a href="about.html" class="viewBtn">
                                 <p>VIEW MORE INTOR.<span>+</span></p>
                             </a>
                         </div>
@@ -76,33 +79,40 @@
                             <a href="work/web_pineresort.html" class="workItem">
                                 <img src="img/workitem_pineresort.png" alt="파인리조트 웹">
                                 <div class="workDetail">
-                                    <p class="type">Web site &amp; Mobile</p>
+                                    <p class="type">Web site</p>
                                     <p class="title">양지 파인리조트 리뉴얼</p>
                                 </div>
                             </a>
-                            <a href="#" class="workItem">
+                            <a href="work/seasansoo.html" class="workItem">
                                 <img src="img/workitem_seosansoo.png" alt="서산수 모바일">
                                 <div class="workDetail">
                                     <p class="type">Web site &amp; Mobile</p>
-                                    <p class="title">서산수 컨트리클럽 리뉴얼</p>
+                                    <p class="title">서산수 골프 앤 리조트 리뉴얼</p>
                                 </div>
                             </a>
-                            <a href="#" class="workItem">
+                            <a href="work/beaconhills.html" class="workItem">
                                 <img src="img/workitem_beaconhills.png" alt="비콘힐스">
                                 <div class="workDetail">
                                     <p class="type">Web site &amp; Mobile</p>
-                                    <p class="title">비콘힐스 컨트리클럽 구축</p>
+                                    <p class="title">비콘힐스 골프 클럽  구축</p>
                                 </div>
                             </a>
-                            <a href="work/shinedale.html" class="workItem">
-                                <img src="img/workitem_beaconhills.png" alt="비콘힐">
+                            <a href="work/stonegate.html" class="workItem">
+                                <img src="img/workitem_stonegate.png" alt="스톤게이트">
+                                <div class="workDetail">
+                                    <p class="type">Web site</p>
+                                    <p class="title">스톤게이트 컨트리클럽 구축</p>
+                                </div>
+                            </a>
+                            <a href="work/sevenvalley.html" class="workItem">
+                                <img src="img/workitem_sevenvalley.png" alt="세븐밸리">
                                 <div class="workDetail">
                                     <p class="type">Web site &amp; Mobile</p>
-                                    <p class="title">샤인데일 컨트리클럽 웹 리뉴얼</p>
+                                    <p class="title">세븐밸리 컨트리클럽 구축</p>
                                 </div>
                             </a>
                         </div>
-                        <div class="buttonArea mt80" data-aos="fade-up">
+                        <div class="buttonArea mt110" data-aos="fade-up">
                             <a href="javascript:;" class="viewBtn">
                                 <p>VIEW MORE WORK<span>+</span></p>
                             </a>
@@ -129,10 +139,10 @@
                 <dl>
                     <dt>EXPLORE</dt>
                     <dd>
-                        <a href="index.html">Home</a>
-                        <a href="aboutme.html">About me</a>
-                        <a href="works.html">Works</a>
-                        <a href="contact.html">Contact</a>
+                        <a href="#">Home</a>
+                        <a href="#aboutme">About me</a>
+                        <a href="#works">Works</a>
+                        <a href="#contact">Contact</a>
                     </dd>
                 </dl>
             </div>
@@ -146,7 +156,13 @@
     <script src="js/jquery-1.12.3.min.js"></script>
     <script src="js/aos.js"></script>
     <script type="text/javascript">
+        
         $(document).ready(function(){
+            setTimeout(function() {
+                $('.loading').fadeOut(2000);
+                $('.loadingInner').hide();
+            }, 3000);
+            
             /*메인 스크롤이벤트*/
             $(window).scroll(function (){
                 var value = $(this).scrollTop();
@@ -165,7 +181,6 @@
                     $('nav a').removeClass('colChange');
                 }
             });
-            
             $(function() {
                 $('nav a').bind('click', function(event) {
                     $('html, body').stop().animate({
@@ -174,6 +189,22 @@
                     event.preventDefault();
                 });
             });
+            
+            $(window).scroll(function(){
+                $('nav a').removeClass('active');
+                var scT =  $(window).scrollTop();
+                if(scT <= 799){
+                    $("nav a[href='#home']").addClass('active');
+                }else if(scT > 800 && scT <= 1700){
+                    $("nav a[href='#about']").addClass('active');
+                }else if(scT > 1700 && scT <= 3300){
+                    $("nav a[href='#work']").addClass('active');
+                }else{
+                    $("nav a[href='#contact']").addClass('active');
+                }
+            });
+
+            
             
             /*페럴렉스*/
             $(window).on('mousemove', function(e) {

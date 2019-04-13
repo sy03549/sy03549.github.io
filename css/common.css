@@ -250,7 +250,33 @@ input, select {
 /*========================================================
 ==========================================================
 ========================================================*/
-
+div.loading {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#313131;
+    z-index:9999;
+}
+.loadingInner{
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-top:-70px;
+    margin-left:-15px;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background: #a8393f;;
+    border-radius: 50%;
+    animation:loading 1s ease-in-out infinite;
+}
+@keyframes loading{
+    0%{transform:translate(0,0px);}
+    50%{transform:translate(0,50px);}
+    100%{transform:translate(0,0px);}
+}
 
 
 /*-- header --*/
@@ -258,7 +284,7 @@ header {
     position:fixed;
     width:100%;
     height:80px;
-    z-index:9999;
+    z-index:8888;
 }
 header nav {
     position:absolute;
@@ -325,6 +351,27 @@ div.wrap {
     width:1200px;
 }
 
+/*페럴렉스*/
+div.parallax span {
+    display:block;
+    position:absolute;
+    top:20px;
+    left:0;
+    width:100%;
+    height:100%;
+}
+div.parallax span.blue {
+    top:-30px;
+    background:url('../img/particle_blue.png') no-repeat top center;
+}
+div.parallax span.red {
+    left:-60px;
+    background:url('../img/particle_red.png') no-repeat top center;
+}
+div.parallax span.gray {
+    background:url('../img/particle_gray.png') no-repeat top center;
+}
+
 /* 텍스트 */
 div.subTit {
     font-family: 'Noto Sans Bold';
@@ -334,13 +381,13 @@ div.subTit p {
     color:#e7b542;
 }
 div.subTit h2 {
-    font-size:42px;
+    font-size:40px;
     line-height:56px;
     color:#313131;
 }
 p.subTxt {
     font-size:22px;
-    line-height:38px;
+    line-height:40px;
     color:#999999;
 }
 

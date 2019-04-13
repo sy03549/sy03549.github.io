@@ -9,41 +9,22 @@ div.visual {
     height:100vh;
     overflow:hidden;
 }
-div.visual div.parallax span {
-    display:block;
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-}
-div.visual div.parallax span.blue {
-    top:-50px;
-    background:url('../img/particle_blue.png') no-repeat top center;
-}
-div.visual div.parallax span.red {
-    left:-80px;
-    background:url('../img/particle_red.png') no-repeat top center;
-}
-div.visual div.parallax span.gray {
-    background:url('../img/particle_gray.png') no-repeat top center;
-}
 div.mainTit {
     position:absolute;
     top:50%;
-    margin-top:-180px;
+    margin-top:-150px;
 }
 div.mainTit div {
     overflow-y:hidden;
 }
 div.mainTit h1 {
     padding:10px 0;
-    font-size:120px;
+    font-size:110px;
     font-family: 'Noto Sans Bold';
     color:#e7b542;
     animation:txtEffect .8s both;
     animation-timing-function:cubic-bezier(.55,.3,0,.99);
-    animation-delay:1.5s;
+    animation-delay:4s;
 }
 @keyframes txtEffect {
   0%   {
@@ -59,7 +40,7 @@ div.mainTit h1.stroke {
     color: transparent;
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: #e7b542;
-    animation-delay:2s;
+    animation-delay:4.5s;
 }
 div.mainTit h1 span.dot {
     color:#a8393f;
@@ -71,7 +52,7 @@ div.scrollDown {
     text-align:center;
     animation:txtEffect .8s both;
     animation-timing-function:cubic-bezier(.55,.3,0,.99);
-    animation-delay:2.2s;
+    animation-delay:4.7s;
 }
 div.scrollDown p {
     margin-bottom:5px;
@@ -111,7 +92,7 @@ div.trickScroll div.element {
     background:#fff;
     animation:trick .5s both;
     animation-timing-function:cubic-bezier(.55,.3,0,.99);
-    animation-delay:2.5s;
+    animation-delay:5s;
     box-sizing:content-box;
 }
 @keyframes trick {
@@ -141,15 +122,18 @@ div.work {
     padding-bottom:250px;
 }
 div.work div.workInner {
-    padding:80px 0 200px 0;
-    display:grid;
-    grid-template-columns:auto auto;
-    grid-column-gap:60px;
-    grid-row-gap:70px;
+    padding:80px 0;
+}
+div.workInner::after {
+    content:'';
+    display:block;
+    clear:both;
 }
 a.workItem {
     position:relative;
     display:none;
+    float:left;
+    margin-bottom:70px;
     width:570px;
     height:500px;
 }
@@ -160,7 +144,8 @@ a.workItem.active {
     display:block;
 }
 a.workItem:nth-child(2n) {
-    top:160px;
+    margin-left:60px;
+    top:140px;
 }
 a.workItem:after {
     content:'Veiw More';

@@ -19,7 +19,7 @@
     <section>
         <div class="workVisual shinedale">
             <div class="wrap">
-                <div class="workTit">
+                <div class="workTit" data-aos="fade-up">
                     <p class="type">WEB &amp; MOBILE RENEWAL</p>
                     <p class="title">샤인데일 컨트리클럽</p>
                 </div>
@@ -29,7 +29,7 @@
             </div>
         </div>
         <div class="contents">
-            <div class="infoArea">
+            <div class="infoArea" data-aos="fade-up" data-aos-delay="500">
                 <div class="leftCnt">
                     <div class="summary">
                         <h3>한국에서 가장 아름다운 골프장 '샤인데일' 리뉴얼 프로젝트</h3>
@@ -56,12 +56,12 @@
                 </div>
             </div>
             <div class="workCnt">
-                <img src="../img/work/shinedale00.png" alt="메인페이지">
-                <img src="../img/work/shinedale03.png" alt="레스토랑페이지">
-                <img src="../img/work/shinedale02.png" alt="코스소개페이지">
-                <img src="../img/work/shinedale02_1.png" alt="코스소개페이지">
-                <img src="../img/work/shinedale05.png" alt="공지사항">
-                <img src="../img/work/shinedale_m.png" alt="모바일">
+                <img src="../img/work/shinedale00.png" alt="메인페이지" data-aos="fade-up">
+                <img src="../img/work/shinedale03.png" alt="레스토랑페이지" data-aos="fade-up">
+                <img src="../img/work/shinedale02.png" alt="코스소개페이지" data-aos="fade-up">
+                <img src="../img/work/shinedale02_1.png" alt="코스소개페이지" data-aos="fade-up">
+                <img src="../img/work/shinedale05.png" alt="공지사항" data-aos="fade-up">
+                <img src="../img/work/shinedale_m.png" alt="모바일" data-aos="fade-up">
             </div>
             <div class="buttonArea mt150 backTop">
                 <a href="javascript:;" class="viewBtn">
@@ -87,10 +87,10 @@
                 <dl>
                     <dt>EXPLORE</dt>
                     <dd>
-                        <a href="index.html">Home</a>
-                        <a href="aboutme.html">About me</a>
-                        <a href="works.html">Works</a>
-                        <a href="contact.html">Contact</a>
+                        <a href="../index.html">Home</a>
+                        <a href="https://sy03549.github.io/#about">About me</a>
+                        <a href="https://sy03549.github.io/#work">Works</a>
+                        <a href="https://sy03549.github.io/#contact">Contact</a>
                     </dd>
                 </dl>
             </div>
@@ -105,6 +105,7 @@
     <script src="../js/aos.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
+            $("body").delay(500).animate({opacity:1}, 500);
             /*네비게이션*/
             $(window).scroll(function(){
                 if ($(window).scrollTop() >= 530) {
