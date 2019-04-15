@@ -46,6 +46,7 @@ div.subPageTit h1 {
     color:#e7b542;
     animation:txtEffect .8s both;
     animation-timing-function:cubic-bezier(.55,.3,0,.99);
+    animation-delay:2.5s; 
 }
 @keyframes txtEffect {
   0%   {
@@ -72,7 +73,7 @@ div.subPageTit p {
     color:#999;
     animation:txtEffect .5s both;
     animation-timing-function:cubic-bezier(.55,.3,0,.99);
-    animation-delay:.4s;
+    animation-delay:2.9s;
 }
 
 div.about {
