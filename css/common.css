@@ -259,23 +259,49 @@ div.loading {
     background:#313131;
     z-index:9999;
 }
-.loadingInner{
-    position:absolute;
-    top:50%;
-    left:50%;
-    margin-top:-70px;
-    margin-left:-15px;
-    width: 25px;
-    height: 25px;
-    display: inline-block;
-    background: #a8393f;;
-    border-radius: 50%;
-    animation:loading 1s ease-in-out infinite;
-}
+/*
 @keyframes loading{
     0%{transform:translate(0,0px);}
     50%{transform:translate(0,50px);}
     100%{transform:translate(0,0px);}
+}
+*/
+.loadingInner {
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-top:-15px;
+    display: inline-block;
+}
+.loadingInner i{
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  background: #ff5954;
+  border-radius: 50%;
+  position: absolute;
+}
+.loadingInner i:nth-child(1){
+  transform:translate(-20px,0);
+  animation:loading7-ani1 1s linear infinite;
+
+}
+.loadingInner i:nth-child(2){
+  background: #00a8ce;
+  transform:translate(20px,0);
+  animation:loading7-ani2 1s linear infinite;
+}
+@keyframes loading7-ani1{
+  25%{z-index: 2;}
+  50%{transform:translate(20px,0) scale(1);}
+  75%{transform:translate(0,0) scale(0.75);}
+  100%{transform:translate(-20px,0) scale(1);}
+}
+@keyframes loading7-ani2{
+  25%{transform:translate(0,0) scale(0.75);}
+  50%{transform:translate(-20px,0) scale(1);}
+  75%{z-index: 2;}
+  100%{transform:translate(20px,0) scale(1);}
 }
 
 

@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="css/aos.css">
 </head>
 <body>
-   <div class="loading">
-        <div class="loadingInner"></div>
-   </div>
     <header>
         <nav>
             <a href="#home">Home</a>
@@ -158,16 +155,23 @@
             Copyright © Su Yeon KIM 2019. All rights reserved.
         </p>
     </footer>
-    
+    <div class="loading">
+        <div class="loadingInner">
+            <i></i>
+            <i></i>
+        </div>
+    </div>
     
     <script src="js/jquery-1.12.3.min.js"></script>
     <script src="js/aos.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-            setTimeout(function() {
-                $('.loading').fadeOut(2000);
-                $('.loadingInner').hide();
-            }, 3000);
+            $(window).load(function(){
+                setTimeout(function() {
+                    $('.loading').fadeOut(2000);
+                    $('.loadingInner').hide();
+                }, 3000);
+            });
             
             /*메인 스크롤이벤트*/
             $(window).scroll(function (){
