@@ -382,6 +382,14 @@ div.goSiteBtn a:hover {
     background-color:#e7b542;
     color:#fff;
 }
+div.goSiteBtn a.demo {
+    border:2px solid #ccc;
+    color:#bbb;
+}
+div.goSiteBtn a:hover.demo {
+    background-color:#ccc;
+    color:#fff;
+}
 
 div.infoArea div.rightCnt {
     float:right;
