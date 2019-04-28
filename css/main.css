@@ -37,7 +37,8 @@ div.mainTit h1 {
     }
 }
 div.mainTit h1.stroke {
-    color: transparent;
+    color:#e7b542;
+    -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: #e7b542;
     animation-delay:4.5s;

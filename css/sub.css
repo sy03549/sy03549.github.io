@@ -59,7 +59,8 @@ div.subPageTit h1 {
     }
 }
 div.subPageTit span.stroke {
-    color: transparent;
+    color:#e7b542;
+    -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #e7b542;
     animation-delay:2s;
