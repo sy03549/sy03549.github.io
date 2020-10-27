@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>su yeon portfolio</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/sub.css">
+    <link rel="stylesheet" href="../css/aos.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="https://sy03549.github.io/#about">About me</a>
+            <a href="https://sy03549.github.io/#work">Works</a>
+            <a href="https://sy03549.github.io/#contact">Contact</a>
+        </nav>
+    </header>
+    <section>
+        <div class="workVisual seosansoo">
+            <div class="wrap">
+                <div class="workTit" data-aos="fade-up">
+                    <p class="type">WEB &amp; MOBILE RENEWAL</p>
+                    <p class="title">서산수 골프 앤 리조트</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="../img/thumbnail/seosansoo.png" alt="서산수썸네일">
+                </div>
+            </div>
+        </div>
+        <div class="contents">
+            <div class="infoArea" data-aos="fade-up" data-aos-delay="500">
+                <div class="leftCnt">
+                    <div class="summary">
+                        <h3>바다의 꿈이 담긴 필드의 명작 '서산수 골프 앤 리조트' 리뉴얼 프로젝트</h3>
+                        <p>
+                        기존 사이트가 굉장히 오래되었고 사이트 맵 구조 또한 전혀 정리되어있지 않았고
+                        자료 제공이 되지 않은 상태에서 플래시를 사용하고 있어서 자료를 따오기도 힘들었던 프로젝트입니다. 일단 사이트 맵부터 정리하며 차근차근 사이트 내의 컨텐츠를 정리해가며 내용을 채워 넣었지만 기존 사이트에서 따온 사진들로 디자인하기엔 너무 한정적이였기 때문에 최대한 단순하게 레이아웃을 잡아 작업했어서 서브페이지들이 많이 아쉬운 프로젝트입니다. 웹사이트와 모바일의 디자인과 퍼블리싱을 담당했습니다.</p>
+                    </div>
+                    <div class="goSiteBtn">
+                        <a href="http://seosansoo.com/Default.aspx" target="_blank">웹사이트 바로가기</a>
+                        <a href="http://seosansoo.com/mobile" target="_blank">모바일 바로가기</a>
+                        <a href="http://pv.moonos.net/seosansoo/html/main/" class="demo" target="_blank">데모사이트 바로가기</a>
+                    </div>
+                </div>
+                <div class="rightCnt">
+                    <dl class="detailMeta">
+                        <dt>업무포지션</dt>
+                        <dd>디자인, 퍼블리싱</dd>
+                    </dl>
+                    <dl class="detailMeta">
+                        <dt>참여도</dt>
+                        <dd>디자인(100%), 퍼블리싱(100%)</dd>
+                    </dl>
+                    <dl class="detailMeta">
+                        <dt>제작기간</dt>
+                        <dd>18.01.30 ~ 18.03.20</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="workCnt">
+                <img src="../img/work/seosansoo00.png" alt="메인페이지" data-aos="fade-up">
+                <img src="../img/work/seosansoo01.png" alt="인사말" data-aos="fade-up">
+                <img src="../img/work/seosansoo02.png" alt="코스소개" data-aos="fade-up">
+                <img src="../img/work/seosansoo03.png" alt="오시는길" data-aos="fade-up">
+                <img src="../img/work/seosansoo04.png" alt="정보수정" data-aos="fade-up">
+                <img src="../img/work/seosansoo_m.png" alt="모바일" data-aos="fade-up">
+            </div>
+            <div class="buttonArea backTop">
+                <a href="javascript:;" class="viewBtn">
+                    <p>BACK TO TOP<span>↑</span></p>
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footWrap">
+            <div class="leftCnt">
+                <span class="symbol"></span>
+                <p>I hope to meet<br>you soon!</p>
+            </div>
+            <div id="contact" class="rightCnt">
+                <dl>
+                    <dt>GET IN TOUCH</dt>
+                    <dd>
+                        <p>sy03549@gmail.com</p>
+                        <p>+82 10 4624 3549</p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>EXPLORE</dt>
+                    <dd>
+                        <a href="../index.html">Home</a>
+                        <a href="https://sy03549.github.io/#about">About me</a>
+                        <a href="https://sy03549.github.io/#work">Works</a>
+                        <a href="https://sy03549.github.io/#contact">Contact</a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <p class="copyright">
+            Copyright © Su Yeon KIM 2019. All rights reserved.
+        </p>
+    </footer>
+    <div class="loading">
+        <div class="loadingInner">
+            <i></i>
+            <i></i>
+        </div>
+    </div>
+    
+    <script src="../js/jquery-1.12.3.min.js"></script>
+    <script src="../js/aos.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(window).load(function(){
+                setTimeout(function() {
+                    $('.loading').fadeOut(2000);
+                    $('.loadingInner').hide();
+                }, 1200);
+            });
+            
+            /*네비게이션*/
+            $(window).scroll(function(){
+                if ($(window).scrollTop() >= 530) {
+                    $('nav a').addClass('colChange');
+                }
+                else {
+                    $('nav a').removeClass('colChange');
+                }
+            });
+            
+            $('.backTop').click(function(){
+                $('html,body').animate({scrollTop:'0'},800);
+            });
+            
+        });
+        var myAOS = function() {
+            AOS.init({
+                offset: 200,
+                easing: 'ease-out-back',
+                duration: 1500,
+                once:true
+            });
+        }
+        myAOS();
+    </script>
+</body>
+</html>

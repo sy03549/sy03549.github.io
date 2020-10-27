@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>su yeon portfolio</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/sub.css">
+    <link rel="stylesheet" href="../css/aos.css">
+    <link rel="stylesheet" href="../css/resize.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="https://sy03549.github.io/#about">About me</a>
+            <a href="https://sy03549.github.io/#work">Works</a>
+            <a href="https://sy03549.github.io/#contact">Contact</a>
+        </nav>
+    </header>
+    <section>
+        <div class="workVisual sevenvalley">
+            <div class="wrap">
+                <div class="workTit" data-aos="fade-up">
+                    <p class="type">WEB &amp; MOBILE RENEWAL</p>
+                    <p class="title">세븐밸리 컨트리클럽</p>
+                </div>
+                <div class="thumbnail">
+                    <img src="../img/thumbnail/sevenvalley.png" alt="세븐밸리썸네일">
+                </div>
+            </div>
+        </div>
+        <div class="contents">
+            <div class="infoArea" data-aos="fade-up" data-aos-delay="500">
+                <div class="leftCnt">
+                    <div class="summary">
+                        <h3>자연과 하나되는 명품코스 '세븐밸리 컨트리클럽' 웹 구축, 모바일 리뉴얼 프로젝트</h3>
+                        <p>웹사이트 퍼블리싱과 모바일 디자인, 퍼블리싱을 담당했습니다.<br>
+                        모바일은 사이트 오픈 약 1년만에 리뉴얼 요청이 들어와서 새로 작업했습니다.</p>
+                    </div>
+                    <div class="goSiteBtn">
+                        <a href="http://sevenvalley.co.kr/" target="_blank">웹사이트 바로가기</a>
+                        <a href="http://sevenvalley.co.kr/mobile">모바일 바로가기</a>
+                    </div>
+                </div>
+                <div class="rightCnt">
+                    <dl class="detailMeta">
+                        <dt>업무포지션</dt>
+                        <dd>디자인, 퍼블리싱</dd>
+                    </dl>
+                    <dl class="detailMeta">
+                        <dt>참여도</dt>
+                        <dd>디자인(50%), 퍼블리싱(100%)</dd>
+                    </dl>
+                    <dl class="detailMeta">
+                        <dt>제작기간</dt>
+                        <dd>18.05.31 ~ 18.06.15</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="workCnt">
+                <img src="../img/work/sevenvalley00.png" alt="메인페이지" data-aos="fade-up">
+                <img src="../img/work/sevenvalley01.png" alt="실시간예약" data-aos="fade-up">
+                <img src="../img/work/sevenvalley02.png" alt="연혁" data-aos="fade-up">
+                <img src="../img/work/sevenvalley03.png" alt="이용안내" data-aos="fade-up">
+                <img src="../img/work/sevenvalley_m.png" alt="모바일" data-aos="fade-up">
+            </div>
+            <div class="buttonArea backTop">
+                <a href="javascript:;" class="viewBtn">
+                    <p>BACK TO TOP<span>↑</span></p>
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footWrap">
+            <div class="leftCnt">
+                <span class="symbol"></span>
+                <p>I hope to meet<br>you soon!</p>
+            </div>
+            <div id="contact" class="rightCnt">
+                <dl>
+                    <dt>GET IN TOUCH</dt>
+                    <dd>
+                        <p>sy03549@gmail.com</p>
+                        <p>+82 10 4624 3549</p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>EXPLORE</dt>
+                    <dd>
+                        <a href="../index.html">Home</a>
+                        <a href="https://sy03549.github.io/#about">About me</a>
+                        <a href="https://sy03549.github.io/#work">Works</a>
+                        <a href="https://sy03549.github.io/#contact">Contact</a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <p class="copyright">
+            Copyright © Su Yeon KIM 2019. All rights reserved.
+        </p>
+    </footer>
+    <div class="loading">
+        <div class="loadingInner">
+            <i></i>
+            <i></i>
+        </div>
+    </div>
+    
+    <script src="../js/jquery-1.12.3.min.js"></script>
+    <script src="../js/aos.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(window).load(function(){
+                setTimeout(function() {
+                    $('.loading').fadeOut(2000);
+                    $('.loadingInner').hide();
+                }, 1200);
+            });
+            
+            /*네비게이션*/
+            $(window).scroll(function(){
+                if ($(window).scrollTop() >= 530) {
+                    $('nav a').addClass('colChange');
+                }
+                else {
+                    $('nav a').removeClass('colChange');
+                }
+            });
+            
+            $('.backTop').click(function(){
+                $('html,body').animate({scrollTop:'0'},800);
+            });
+            
+        });
+        var myAOS = function() {
+            AOS.init({
+                offset: 200,
+                easing: 'ease-out-back',
+                duration: 1500,
+                once:true
+            });
+        }
+        myAOS();
+    </script>
+</body>
+</html>
