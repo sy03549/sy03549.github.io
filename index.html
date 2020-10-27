@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>su yeon portfolio</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/resize.css">
     <link rel="stylesheet" href="css/aos.css">
 </head>
 <body>
@@ -39,88 +41,162 @@
             </div>
         </div>
         <div class="container">
-            <div class="trickScroll">
-                <div class="element"></div>
-            </div>
-            <div class="contents">
-                <div class="wrap">
-                    <div id="about" class="about">
-                        <div class="subTit" data-aos="fade-up">
-                            <p>ABOUT ME</p>
-                            <h2 class="mt65">I Am a Web Publisher<br>And  Front end.</h2>
-                        </div>
-                        <p class="subTxt mt40" data-aos="fade-up" data-aos-delay="200">
-                            안녕하세요. 언제나 새로운 도전을 하는 것을 즐기는 김수연입니다.<br>
-                            저는 실용적이면서도 보기 좋은 사용자 친화적 웹사이트의 디자인을 추구하며<br>
-                            언제나 웹 접근성, 웹 표준성에 적합하게 개발하려 노력합니다.
-                        </p>
-                        <div class="buttonArea mt110" data-aos="fade-up" data-aos-delay="200">
-                            <a href="about.html" class="viewBtn">
-                                <p>VIEW MORE INTOR.<span>+</span></p>
-                            </a>
-                        </div>
+           <div class="wrap"> 
+               <div id="about" class="content">
+                    <div class="subTit" data-aos="fade-up">
+                        <p>ABOUT ME</p>
+                        <h2>I Am a Web Publisher<br>And  Front end.</h2>
                     </div>
-                    <div id="work" class="work">
-                        <div class="subTit">
-                            <p>WORK</p>
-                            <h2 class="mt25">Selected Project</h2>
-                        </div>
-                        <div class="workInner" data-aos="fade-up">
-                            <a href="work/shinedale.html" class="workItem">
-                                <img src="img/workitem_shindale.png" alt="샤인데일 웹">
-                                <div class="workDetail">
-                                    <p class="type">Web site &amp; Mobile</p>
-                                    <p class="title">샤인데일 컨트리클럽 리뉴얼</p>
-                                </div>
-                            </a>
-                            <a href="work/pineresort.html" class="workItem">
-                                <img src="img/workitem_pineresort.png" alt="파인리조트 웹">
-                                <div class="workDetail">
-                                    <p class="type">Web site</p>
-                                    <p class="title">양지 파인리조트 리뉴얼</p>
-                                </div>
-                            </a>
-                            <a href="work/seosansoo.html" class="workItem">
-                                <img src="img/workitem_seosansoo.png" alt="서산수 모바일">
-                                <div class="workDetail">
-                                    <p class="type">Web site &amp; Mobile</p>
-                                    <p class="title">서산수 골프 앤 리조트 리뉴얼</p>
-                                </div>
-                            </a>
-                            <a href="javascript:alert('준비중입니다');" class="workItem">
-                                <img src="img/workitem_nomozaki.png" alt="노모자키">
-                                <div class="workDetail">
-                                    <p class="type">Mobile</p>
-                                    <p class="title">노모자키 골프 클럽 구축</p>
-                                </div>
-                            </a>
-                            <a href="work/stonegate.html" class="workItem">
-                                <img src="img/workitem_stonegate.png" alt="스톤게이트">
-                                <div class="workDetail">
-                                    <p class="type">Web site</p>
-                                    <p class="title">스톤게이트 컨트리클럽 구축</p>
-                                </div>
-                            </a>
-                            <a href="work/beaconhills.html" class="workItem">
-                                <img src="img/workitem_beaconhills.png" alt="비콘힐스">
-                                <div class="workDetail">
-                                    <p class="type">Web site &amp; Mobile</p>
-                                    <p class="title">비콘힐스 골프 클럽 구축</p>
-                                </div>
-                            </a>
-                            <a href="work/sevenvalley.html" class="workItem">
-                                <img src="img/workitem_sevenvalley.png" alt="세븐밸리">
-                                <div class="workDetail">
-                                    <p class="type">Web site &amp; Mobile</p>
-                                    <p class="title">세븐밸리 컨트리클럽 구축</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="buttonArea mt180" data-aos="fade-up">
-                            <a href="javascript:;" class="viewBtn">
-                                <p>VIEW MORE WORK<span>+</span></p>
-                            </a>
-                        </div>
+                    <p class="subTxt" data-aos="fade-up" data-aos-delay="200">
+                        안녕하세요. 언제나 새로운 도전을 하는 것을 즐기는 김수연입니다.<br>
+                        저는 실용적이면서도 보기 좋은 사용자 친화적 웹사이트의 디자인을 추구하며<br>
+                        언제나 웹 접근성, 웹 표준성에 적합하게 개발하려 노력합니다.
+                    </p>
+                    <div class="buttonArea" data-aos="fade-up" data-aos-delay="200">
+                        <a href="about.html" class="viewBtn">
+                            <p>VIEW MORE INTOR.<span>+</span></p>
+                        </a>
+                    </div>
+                </div>
+                <div id="work" class="content">
+                    <div class="subTit">
+                        <p>WORK</p>
+                        <h2 class="mt25">Selected Project</h2>
+                    </div>
+                    <div class="workInner" data-aos="fade-up">
+                        <a href="#empty" class="workItem">
+                            <img src="img/workitem_keepgrow.png" alt="킵그로우싱크">
+                            <div class="workDetail">
+                                <p class="type">Web site &amp; Mobile</p>
+                                <p class="title">킵그로우싱크 상품 기능 개발</p>
+                            </div>
+                        </a>
+                        <a href="work/shinedale.html" class="workItem">
+                            <img src="img/workitem_shindale.png" alt="샤인데일 웹">
+                            <div class="workDetail">
+                                <p class="type">Web site &amp; Mobile</p>
+                                <p class="title">샤인데일 컨트리클럽 리뉴얼</p>
+                            </div>
+                        </a>
+                        <a href="#empty" class="workItem">
+                            <img src="img/workitem_arnew.png" alt="아르뉴스타일 모바일">
+                            <div class="workDetail">
+                                <p class="type">Mobile</p>
+                                <p class="title">아르뉴스타일 쇼핑몰 리뉴얼</p>
+                            </div>
+                        </a>
+                        <a href="#empty" class="workItem">
+                            <img src="img/workitem_ohora.png" alt="오호라 모바일">
+                            <div class="workDetail">
+                                <p class="type">Mobile</p>
+                                <p class="title">오호라 쇼핑몰 리뉴얼</p>
+                            </div>
+                        </a>
+                        <a href="#empty" class="workItem">
+                            <img src="img/workitem_pigment.png" alt="피그먼트 모바일">
+                            <div class="workDetail">
+                                <p class="type">Mobile</p>
+                                <p class="title">피그먼트 쇼핑몰 리뉴얼</p>
+                            </div>
+                        </a>
+                        <a href="#empty" class="workItem">
+                            <img src="img/workitem_foodduck.png" alt="푸드덕 모바일">
+                            <div class="workDetail">
+                                <p class="type">Mobile</p>
+                                <p class="title">푸드덕 쇼핑몰 리뉴얼</p>
+                            </div>
+                        </a>
+                        <a href="#empty" class="workItem">
+                            <img src="img/workitem_madejay.png" alt="메이드제이 모바일">
+                            <div class="workDetail">
+                                <p class="type">Mobile</p>
+                                <p class="title">메이드제이 쇼핑몰 리뉴얼</p>
+                            </div>
+                        </a>
+                        <a href="#empty" class="workItem">
+                            <img src="img/workitem_whodings.png" alt="후딩스 모바일">
+                            <div class="workDetail colorBlack">
+                                <p class="type">Mobile</p>
+                                <p class="title">후딩스 쇼핑몰 구축</p>
+                            </div>
+                        </a>
+                        <a href="#empty" class="workItem">
+                            <img src="img/workitem_baddiary.png" alt="악녀일기 모바일">
+                            <div class="workDetail">
+                                <p class="type">Mobile</p>
+                                <p class="title">악녀일기 쇼핑몰 리뉴얼</p>
+                            </div>
+                        </a>
+                        <a href="#empty" class="workItem">
+                            <img src="img/workitem_ggsing.png" alt="고고싱 모바일">
+                            <div class="workDetail">
+                                <p class="type">Mobile</p>
+                                <p class="title">고고싱 쇼핑몰 리뉴얼</p>
+                            </div>
+                        </a>
+                        <a href="#empty" class="workItem">
+                            <img src="img/workitem_indibrand.png" alt="인디브랜드 모바일">
+                            <div class="workDetail">
+                                <p class="type">Mobile</p>
+                                <p class="title">인디브랜드 쇼핑몰 리뉴얼</p>
+                            </div>
+                        </a>
+                        <a href="#empty" class="workItem">
+                            <img src="img/workitem_anais.png" alt="아나이스 모바일">
+                            <div class="workDetail">
+                                <p class="type">Mobile</p>
+                                <p class="title">아나이스 쇼핑몰 리뉴얼</p>
+                            </div>
+                        </a>
+                        <a href="work/seosansoo.html" class="workItem">
+                            <img src="img/workitem_seosansoo.png" alt="서산수 모바일">
+                            <div class="workDetail">
+                                <p class="type">Web site &amp; Mobile</p>
+                                <p class="title">서산수 골프 앤 리조트 리뉴얼</p>
+                            </div>
+                        </a>
+                        <a href="work/pineresort.html" class="workItem">
+                            <img src="img/workitem_pineresort.png" alt="파인리조트 웹">
+                            <div class="workDetail">
+                                <p class="type">Web site</p>
+                                <p class="title">양지 파인리조트 리뉴얼</p>
+                            </div>
+                        </a>
+                        <!--
+                        <a href="javascript:alert('준비중입니다');" class="workItem">
+                            <img src="img/workitem_nomozaki.png" alt="노모자키">
+                            <div class="workDetail">
+                                <p class="type">Mobile</p>
+                                <p class="title">노모자키 골프 클럽 구축</p>
+                            </div>
+                        </a>
+                        -->
+                        <a href="work/stonegate.html" class="workItem">
+                            <img src="img/workitem_stonegate.png" alt="스톤게이트">
+                            <div class="workDetail">
+                                <p class="type">Web site</p>
+                                <p class="title">스톤게이트 컨트리클럽 구축</p>
+                            </div>
+                        </a>
+                        <a href="work/beaconhills.html" class="workItem">
+                            <img src="img/workitem_beaconhills.png" alt="비콘힐스">
+                            <div class="workDetail">
+                                <p class="type">Web site &amp; Mobile</p>
+                                <p class="title">비콘힐스 골프 클럽 구축</p>
+                            </div>
+                        </a>
+                        <a href="work/sevenvalley.html" class="workItem">
+                            <img src="img/workitem_sevenvalley.png" alt="세븐밸리">
+                            <div class="workDetail">
+                                <p class="type">Web site &amp; Mobile</p>
+                                <p class="title">세븐밸리 컨트리클럽 구축</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="buttonArea" data-aos="fade-up">
+                        <a href="javascript:moreView(4)" class="viewBtn">
+                            <p>VIEW MORE WORK<span>+</span></p>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -152,72 +228,15 @@
             </div>
         </div>
         <p class="copyright">
-            Copyright © Su Yeon KIM 2019. All rights reserved.
+            Copyright © SUYEON KIM 2019. All rights reserved.
         </p>
     </footer>
-    <div class="loading">
-        <div class="loadingInner">
-            <i></i>
-            <i></i>
-        </div>
-    </div>
     
     <script src="js/jquery-1.12.3.min.js"></script>
     <script src="js/aos.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-            $(window).load(function(){
-                setTimeout(function() {
-                    $('.loading').fadeOut(2000);
-                    $('.loadingInner').hide();
-                }, 3000);
-            });
-            
-            /*메인 스크롤이벤트*/
-            $(window).scroll(function (){
-                var value = $(this).scrollTop();
-                var box = value * 0.0008 + 1;
-                if(box > 0.5) {
-                    $('.trickScroll').css('transform','scaleX('+ box +')');
-                }
-            });
-            
-
-            /*네비게이션*/
-            $(window).scroll(function(){
-                if ($(window).scrollTop() >= 800) {
-                    $('nav a').addClass('colChange');
-                }
-                else {
-                    $('nav a').removeClass('colChange');
-                }
-            });
-            $(function() {
-                $('nav a').bind('click', function(event) {
-                    $('html, body').stop().animate({
-                        scrollTop: $($(this).attr('href')).offset().top
-                    }, 600, 'swing');
-                    event.preventDefault();
-                });
-            });
-            
-            $(window).scroll(function(){
-                $('nav a').removeClass('active');
-                var scT =  $(window).scrollTop();
-                if(scT <= 799){
-                    $("nav a[href='#home']").addClass('active');
-                }else if(scT > 800 && scT <= 1700){
-                    $("nav a[href='#about']").addClass('active');
-                }else if(scT > 1700 && scT <= 3300){
-                    $("nav a[href='#work']").addClass('active');
-                }else{
-                    $("nav a[href='#contact']").addClass('active');
-                }
-            });
-
-            
-            
-            /*페럴렉스*/
+            /*parallax mouse evnet*/
             $(window).on('mousemove', function(e) {
                 var w = $(window).width();
                 var h = $(window).height();
@@ -234,26 +253,51 @@
                 });
             });
             
-            /*더보기 기능*/
-            $(window).on('load', function () {
-                load('.workInner', '4');
-                $(".viewBtn").on("click", function () {
-                    load('.workInner', '4', '.work .buttonArea');
-                })
-            });
-            function load(id, cnt, btn) {
-                var list = id + " .workItem:not(.active)";
-                var length = $(list).length;
-                var total_cnt;
-                if (cnt < length) {
-                    total_cnt = cnt;
-                } else {
-                    total_cnt =length;
-                    $('.work .buttonArea').hide()
+            
+            var navigation = $("nav a");
+            var trickBgWidth = $(".container").width();
+            var cntOffsetTop = $(".container").offset().top;
+            
+            $(window).scroll(function(){
+                var winTop = $(window).scrollTop();
+                
+                winTop > (cntOffsetTop - 70) ? navigation.addClass("colChange") : navigation.removeClass("colChange");
+                
+                $('nav a').removeClass('active');
+                var scT =  $(window).scrollTop();
+                if(scT <= 799){
+                    $("nav a[href='#home']").addClass('active');
+                }else if(scT > 800 && scT <= 1700){
+                    $("nav a[href='#about']").addClass('active');
+                }else if(scT > 1700 && scT <= 3300){
+                    $("nav a[href='#work']").addClass('active');
+                }else{
+                    $("nav a[href='#contact']").addClass('active');
                 }
-                $(list + ":lt(" + total_cnt + ")").addClass("active");
-            }
+                
+                /* background trick event*/
+                $(".container").width(trickBgWidth + winTop)
+                if($('.contents').width() >= 1920){
+                    $('.contents').width(100 + "%")
+                }
+            });
+            
+            //navigation animation event
+            navigation.click(function(){
+                $('html, body').stop().animate({
+                    scrollTop: $($(this).attr('href')).offset().top
+                }, 600, 'swing');
+            });
         });
+        
+        //items moreview
+        var moreView = function(num){
+            var items = $(".workInner a:hidden").length;
+            $(".workInner a:hidden" + ":lt(" + num + ")").css("display","inline-block");
+            if(items < num){
+                $("#work .buttonArea").hide();
+            }
+        };
         var myAOS = function() {
             AOS.init({
                 offset: 200,
