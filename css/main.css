@@ -2,6 +2,7 @@ section {
     width:100%;
     background:#313131;
 }
+
 /*-- 비주얼--*/
 div.visual {
     position:relative;
@@ -12,19 +13,19 @@ div.visual {
 div.mainTit {
     position:absolute;
     top:50%;
-    margin-top:-150px;
+    transform:translateY(-50%);
 }
 div.mainTit div {
     overflow-y:hidden;
 }
 div.mainTit h1 {
     padding:10px 0;
-    font-size:110px;
+    font-size:100px;
     font-family: 'Noto Sans Bold';
     color:#e7b542;
     animation:txtEffect .8s both;
     animation-timing-function:cubic-bezier(.55,.3,0,.99);
-    animation-delay:4s;
+    animation-delay:0s;
 }
 @keyframes txtEffect {
   0%   {
@@ -41,7 +42,7 @@ div.mainTit h1.stroke {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: #e7b542;
-    animation-delay:4.5s;
+    animation-delay:0.5s;
 }
 div.mainTit h1 span.dot {
     color:#a8393f;
@@ -49,11 +50,8 @@ div.mainTit h1 span.dot {
 div.scrollDown {
     position:absolute;
     bottom:90px;
-    width:1200px;
+    width:1080px;
     text-align:center;
-    animation:txtEffect .8s both;
-    animation-timing-function:cubic-bezier(.55,.3,0,.99);
-    animation-delay:4.7s;
 }
 div.scrollDown p {
     margin-bottom:5px;
@@ -66,7 +64,7 @@ div.scrollDown span.arrow {
     height:8px;
     background:url('../img/scrollArrow.png') no-repeat;
     animation:scrolling 2s infinite;
-    animation-timing-function:ease-out;;
+    animation-timing-function:ease-out;
 }
 @keyframes scrolling {
     0% {transform: translateY(0)}    
@@ -78,76 +76,62 @@ div.scrollDown span.arrow {
 
 
 /*-- 컨테이너--*/
-div.trickScroll {
+div.container {
     position:relative;
     top:-50px;
     left:50%;
-    margin-left:-600px;
-    width:1200px;
-    height:900px;
-}
-div.trickScroll div.element {
-    padding-bottom:60px;
-    width:1200px;
-    height:900px;
+    width:1080px;
     background:#fff;
+    transform:translate(-50%,50px);
     animation:trick .5s both;
     animation-timing-function:cubic-bezier(.55,.3,0,.99);
-    animation-delay:5s;
+    animation-delay:1s;
     box-sizing:content-box;
 }
 @keyframes trick {
-    0% {transform:translateY(60px);
+    0% {transform:translate(-50%,50px);;
 }    
-    100% {transform: translateY(0px)}
+    100% {transform:translate(-50%,0px);}
 }
 
-div.contents {
-    position:relative;
-    width:100%;
-    background:#fff;
+div.content {
+    padding:140px 0;
 }
 
 /*about*/
-div.about {
-    position:absolute;
-    top:-900px;
-    padding-top:180px;
-    width:1200px;
+div#about {
     text-align:center;
 }
+div#about div.subTit h2 {
+    margin:40px 0;
+}
+div#about div.buttonArea {
+    margin-top:40px;
+} 
 
-/*work*/
-div.work {
-    padding-top:80px;
-    padding-bottom:200px;
+div#work {
+    padding-top:0;
 }
-div.work div.workInner {
-    padding-top:80px;
-    
+div#work .subTit h2 {
+    margin-top:20px;
 }
-div.workInner::after {
-    content:'';
-    display:block;
-    clear:both;
+div#work div.workInner {
+    padding-top:50px;
+    font-size:0;
 }
 a.workItem {
     position:relative;
     display:none;
-    float:left;
-    margin-bottom:70px;
-    width:570px;
-    height:500px;
+    margin-bottom:40px;
+    width:520px;
+    height:460px;
 }
-a.workItem:nth-child(4) {
-    display:block;
-}
-a.workItem.active {
-    display:block;
+a.workItem:nth-child(-n+4) {
+    display:inline-block;
 }
 a.workItem:nth-child(2n) {
-    margin-left:60px;
     top:140px;
+    margin-left:40px;
 }
 a.workItem:after {
     content:'Veiw More';
@@ -156,7 +140,7 @@ a.workItem:after {
     margin-top:-10px;
     display:block;
     width:100%;
-    font-size:20px;
+    font-size:18px;
     text-align:center;
     color:#fff;
     z-index:3;
@@ -174,8 +158,8 @@ a.workItem:before {
     top:10px;
     left:10px;
     display:block;
-    width:550px;
-    height:480px;
+    width:500px;
+    height:440px;
     background:#313131;
     z-index:2;
     transform: scale3d(.95,.95,1);
@@ -188,7 +172,9 @@ a.workItem:hover:before {
 }
 a.workItem img {
     position:absolute;
-    z-index:0;
+    top:0;
+    left:0;
+    width:100%;
 }
 a.workItem div.workDetail {
     position:absolute;
@@ -196,12 +182,18 @@ a.workItem div.workDetail {
     color:#fff;
     z-index:1;
 }
+a.workItem div.workDetail.colorBlack {
+    color:#333;
+}
 a.workItem div.workDetail p.type {
-    font-size:14px;
+    font-size:16px;
     font-family: 'Noto Sans Bold';
 }
 a.workItem div.workDetail p.title {
     margin-top:20px;
     font-size:26px;
 }
+div#work div.buttonArea {
+    margin-top:180px;
+} 
 /*-- END 컨테이너 --*/

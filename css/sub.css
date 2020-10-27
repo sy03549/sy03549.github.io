@@ -1,13 +1,16 @@
 /*공통 버튼 스타일 변경*/
+div.buttonArea {
+    margin-top:150px;
+}
 div.buttonArea a.viewBtn {
     padding-left:25px;
     width:220px;
 }
 div.buttonArea a.viewBtn::before {
-    left:-72.5%;
+    left:-75.5%;
 }
 div.buttonArea a.viewBtn:hover::before {
-    left:72.5%;
+    left:75.5%;
 }
 
 
@@ -35,13 +38,13 @@ div.subVisual div.parallax span.gray {
 
 div.subPageTit {
     margin:200px auto;
-    width:1200px;
+    width:1080px;
 }
 div.subPageTit div {
     overflow-y:hidden;
 }
 div.subPageTit h1 {
-    font-size:70px;
+    font-size:65px;
     font-family: 'Noto Sans Bold';
     color:#e7b542;
     animation:txtEffect .8s both;
@@ -81,6 +84,9 @@ div.about {
     padding-bottom:100px;
     text-align:center;
 }
+div.about .subTit h2 {
+    margin:35px 0;
+}
 div.service {
     padding:80px 0;
     background:#eee;
@@ -92,9 +98,9 @@ div.service::after {
 }
 dl.svcInner {
     float:left;
-    margin-left:30px;
+    margin-left:15px;
     padding:50px 40px;
-    width:380px;
+    width:350px;
     height:545px;
     background:#fff;
 }
@@ -126,7 +132,7 @@ dl.svcInner dd {
 }
 dl.svcInner dd p {
     margin-top:20px;
-    font-size:18px;
+    font-size:16px;
     line-height:32px;
     color:#999;
 }
@@ -158,7 +164,7 @@ ul.resumeList li {
 }
 div.profile {
     float:left;
-    width:380px;
+    width:320px;
 }
 div.profile h3 {
     margin-top:45px;
@@ -188,9 +194,9 @@ div.profile ul li.message {
     background:url('../img/message.png') no-repeat 0 7px;
 }
 div.data {
-    margin:0 30px;
+    margin:0 45px;
     float:left;
-    width:380px;
+    width:320px;
 }
 div.data div {
     margin-bottom:50px;
@@ -223,7 +229,7 @@ div.data ul.resumeList li span {
 }
 div.skill {
     float:left;
-    width:380px;
+    width:350px;
 }
 ul.skillInner {
     margin-top:20px;
@@ -303,11 +309,14 @@ div.stonegate {
 div.sevenvalley {
     background:#192c49;
 }
+div.keepgrowSync {
+    background:#5e81f4;
+}
 
 div.workVisual div.wrap {
     position:relative;
     margin:0 auto;
-    width:1200px;
+    width:1080px;
     height:530px;
 }
 div.workTit {
@@ -336,7 +345,7 @@ div.contents {
 }
 div.infoArea {
     margin:0 auto;
-    width:1200px;
+    width:1080px;
 }
 div.infoArea:after {
     content:'';
@@ -349,7 +358,7 @@ div.infoArea div.buttonArea {
 }
 div.infoArea div.leftCnt {
     float:left;
-    width:740px;
+    width:700px;
 }
 div.summary h3 {
     font-size:20px;
@@ -393,7 +402,7 @@ div.goSiteBtn a:hover.demo {
 
 div.infoArea div.rightCnt {
     float:right;
-    width:340px;
+    width:270px;
 }
 dl.detailMeta {
     margin-bottom:70px;
