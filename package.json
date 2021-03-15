@@ -1,0 +1,25 @@
+{
+  "name": "work",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "rimraf dist/* && parcel index.html --no-source-maps --no-cache --open",
+    "build": "rimraf public/* && parcel build index.html --out-dir public --no-source-maps --no-cache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sy03549/sy03549.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sy03549/sy03549.github.io/issues"
+  },
+  "homepage": "https://github.com/sy03549/sy03549.github.io#readme",
+  "description": "",
+  "devDependencies": {
+    "@babel/preset-env": "^7.13.10"
+  }
+}
