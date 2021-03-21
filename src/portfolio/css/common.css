@@ -1,0 +1,250 @@
+/*=============================
+  00. common
+=============================*/
+/*text*/
+.subTit01 {
+  font-size: 22px;
+}
+.subTxt01 {
+  font-size: 15px;
+}
+.subTxt02 {
+}
+
+/*box*/
+.boxGray {
+  display: block;
+  padding: 15px 10px;
+  width: 100%;
+  border-radius: 5px;
+  background: #f6f6f6;
+  box-sizing: border-box;
+}
+
+/*button*/
+.btn {
+  display: block;
+  margin: 10px 0;
+  padding: 15px 10px;
+  width: 100%;
+  background: #000;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 13px;
+  text-align: center;
+  color: #fff;
+}
+.btn.btnYellow {
+  background: #f5bf4f;
+}
+
+/* contents*/
+#contents {
+  position: relative;
+  left: 380px;
+  padding: 40px;
+  margin: 0 auto;
+  width: 1200px;
+  box-sizing: border-box;
+  transition: opacity 0.8s 0.15s;
+  opacity: 0;
+}
+body.reveal #contents {
+  left: 0;
+  margin: 0 auto;
+  opacity: 1;
+}
+body.work #contents {
+  left: 380px;
+  margin: 0;
+}
+#contents .topUtil {
+  position: fixed;
+  top: 0;
+  padding: 30px 0;
+  width: 1200px;
+}
+#contents .topUtil .breadcrumb {
+  display: inline-block;
+  font-size: 0px;
+}
+#contents .topUtil .breadcrumb li {
+  position: relative;
+  display: inline-block;
+  padding: 0 12px;
+  font-size: 12px;
+  line-height: 11px;
+  color: #999;
+  vertical-align: middle;
+}
+#contents .topUtil .breadcrumb li::after {
+  position: absolute;
+  top: 0;
+  left: -2px;
+  content: ">";
+  display: inline-block;
+  font-size: 11px;
+  color: #bbb;
+}
+#contents .topUtil .breadcrumb li:first-child::after {
+  display: none;
+}
+#contents .topUtil .breadcrumb li.home {
+  padding-left: 15px;
+  background: url("../img/fix_home.png") no-repeat left 1px/10px;
+}
+#contents .topUtil .breadcrumb li a {
+  color: #999;
+}
+#contents .topUtil #menu {
+  position: absolute;
+  top: 25px;
+  right: -5px;
+  width: 30px;
+  height: 30px;
+  background: url("../img/fix_menu.png") no-repeat center/15px;
+  cursor: pointer;
+}
+
+#contents .wrap {
+  padding: 60px 0;
+}
+#contents .wrap .cntBox {
+  padding-top: 60px;
+}
+#contents .wrap .cntBox:first-child {
+  padding-top: 0;
+}
+/*=============================
+  01. About - left content
+=============================*/
+#about {
+  position: fixed;
+  left: -380px;
+  padding: 40px;
+  width: 380px;
+  height: 100vh;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+body.reveal #about {
+  left: 0px;
+}
+#about .introduce h2 {
+  margin-top: 0;
+}
+#about .introduce p {
+  margin-top: 17px;
+}
+#about .resume {
+  margin: 40px 0;
+}
+#about .resume dl {
+  margin-bottom: 30px;
+}
+#about .resume dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  color: #f5bf4f;
+}
+#about .resume dl dd {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #555;
+}
+#about .resume dl dd p {
+  margin-top: 10px;
+}
+#about .resume dl dd p:nth-child(n + 4) {
+  display: none;
+}
+#about .resume dl dd p .data {
+  padding-right: 10px;
+}
+#about .resume .moreView {
+  font-size: 12px;
+  color: #999;
+}
+#about .buttonWrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 180px 40px 30px;
+  width: 100%;
+  box-sizing: border-box;
+}
+#about .buttonWrap::after {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 200px;
+  background: url("../img/about_me.png") no-repeat center/contain;
+  z-index: -1;
+}
+#about .buttonWrap .copyright {
+  margin-top: 30px;
+  font-size: 10px;
+  color: #999;
+}
+
+/*=============================
+  02. Work - right content
+=============================*/
+
+@media (max-height: 800px) {
+  /*=============================
+    00. common
+  =============================*/
+  .subTit01 {
+    font-size: 18px;
+  }
+  .subTxt01 {
+    font-size: 13px;
+  }
+  .subTxt02 {
+  }
+
+  .boxGray {
+    display: block;
+    padding: 13px 10px;
+  }
+
+  .btn {
+    margin: 8px 0;
+    padding: 13px 10px;
+  }
+  .btn.btnYellow {
+    background: #f5bf4f;
+  }
+
+  /*=============================
+    01. About - left content
+  =============================*/
+  #about .resume {
+    margin: 30px 0;
+  }
+  #about .resume dl dt {
+    font-size: 13px;
+  }
+  #about .resume dl dd {
+    font-size: 12px;
+  }
+  #about .resume dl dd p:nth-child(n + 3) {
+    display: none;
+  }
+
+  #about .buttonWrap {
+    padding: 150px 30px 30px;
+  }
+  #about .buttonWrap::after {
+    top: 38px;
+    height: 150px;
+  }
+  #about .buttonWrap .copyright {
+    margin-top: 20px;
+  }
+}
